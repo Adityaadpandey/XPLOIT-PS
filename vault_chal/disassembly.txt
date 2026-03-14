@@ -1,0 +1,817 @@
+
+vault_chal/chal:	file format elf64-x86-64
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000: f3 0f 1e fa                  	endbr64
+    1004: 48 83 ec 08                  	sub	rsp, 0x8
+    1008: 48 8b 05 d9 2f 00 00         	mov	rax, qword ptr [rip + 0x2fd9] # 0x3fe8 <_GLOBAL_OFFSET_TABLE_+0xb8>
+    100f: 48 85 c0                     	test	rax, rax
+    1012: 74 02                        	je	0x1016 <_init+0x16>
+    1014: ff d0                        	call	rax
+    1016: 48 83 c4 08                  	add	rsp, 0x8
+    101a: c3                           	ret
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020: ff 35 12 2f 00 00            	push	qword ptr [rip + 0x2f12] # 0x3f38 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026: f2 ff 25 13 2f 00 00         	repne		jmp	qword ptr [rip + 0x2f13] # 0x3f40 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d: 0f 1f 00                     	nop	dword ptr [rax]
+    1030: f3 0f 1e fa                  	endbr64
+    1034: 68 00 00 00 00               	push	0x0
+    1039: f2 e9 e1 ff ff ff            	repne		jmp	0x1020 <.plt>
+    103f: 90                           	nop
+    1040: f3 0f 1e fa                  	endbr64
+    1044: 68 01 00 00 00               	push	0x1
+    1049: f2 e9 d1 ff ff ff            	repne		jmp	0x1020 <.plt>
+    104f: 90                           	nop
+    1050: f3 0f 1e fa                  	endbr64
+    1054: 68 02 00 00 00               	push	0x2
+    1059: f2 e9 c1 ff ff ff            	repne		jmp	0x1020 <.plt>
+    105f: 90                           	nop
+    1060: f3 0f 1e fa                  	endbr64
+    1064: 68 03 00 00 00               	push	0x3
+    1069: f2 e9 b1 ff ff ff            	repne		jmp	0x1020 <.plt>
+    106f: 90                           	nop
+    1070: f3 0f 1e fa                  	endbr64
+    1074: 68 04 00 00 00               	push	0x4
+    1079: f2 e9 a1 ff ff ff            	repne		jmp	0x1020 <.plt>
+    107f: 90                           	nop
+    1080: f3 0f 1e fa                  	endbr64
+    1084: 68 05 00 00 00               	push	0x5
+    1089: f2 e9 91 ff ff ff            	repne		jmp	0x1020 <.plt>
+    108f: 90                           	nop
+    1090: f3 0f 1e fa                  	endbr64
+    1094: 68 06 00 00 00               	push	0x6
+    1099: f2 e9 81 ff ff ff            	repne		jmp	0x1020 <.plt>
+    109f: 90                           	nop
+    10a0: f3 0f 1e fa                  	endbr64
+    10a4: 68 07 00 00 00               	push	0x7
+    10a9: f2 e9 71 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10af: 90                           	nop
+    10b0: f3 0f 1e fa                  	endbr64
+    10b4: 68 08 00 00 00               	push	0x8
+    10b9: f2 e9 61 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10bf: 90                           	nop
+    10c0: f3 0f 1e fa                  	endbr64
+    10c4: 68 09 00 00 00               	push	0x9
+    10c9: f2 e9 51 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10cf: 90                           	nop
+    10d0: f3 0f 1e fa                  	endbr64
+    10d4: 68 0a 00 00 00               	push	0xa
+    10d9: f2 e9 41 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10df: 90                           	nop
+    10e0: f3 0f 1e fa                  	endbr64
+    10e4: 68 0b 00 00 00               	push	0xb
+    10e9: f2 e9 31 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10ef: 90                           	nop
+    10f0: f3 0f 1e fa                  	endbr64
+    10f4: 68 0c 00 00 00               	push	0xc
+    10f9: f2 e9 21 ff ff ff            	repne		jmp	0x1020 <.plt>
+    10ff: 90                           	nop
+    1100: f3 0f 1e fa                  	endbr64
+    1104: 68 0d 00 00 00               	push	0xd
+    1109: f2 e9 11 ff ff ff            	repne		jmp	0x1020 <.plt>
+    110f: 90                           	nop
+    1110: f3 0f 1e fa                  	endbr64
+    1114: 68 0e 00 00 00               	push	0xe
+    1119: f2 e9 01 ff ff ff            	repne		jmp	0x1020 <.plt>
+    111f: 90                           	nop
+    1120: f3 0f 1e fa                  	endbr64
+    1124: 68 0f 00 00 00               	push	0xf
+    1129: f2 e9 f1 fe ff ff            	repne		jmp	0x1020 <.plt>
+    112f: 90                           	nop
+    1130: f3 0f 1e fa                  	endbr64
+    1134: 68 10 00 00 00               	push	0x10
+    1139: f2 e9 e1 fe ff ff            	repne		jmp	0x1020 <.plt>
+    113f: 90                           	nop
+    1140: f3 0f 1e fa                  	endbr64
+    1144: 68 11 00 00 00               	push	0x11
+    1149: f2 e9 d1 fe ff ff            	repne		jmp	0x1020 <.plt>
+    114f: 90                           	nop
+
+Disassembly of section .plt.got:
+
+0000000000001150 <.plt.got>:
+    1150: f3 0f 1e fa                  	endbr64
+    1154: f2 ff 25 9d 2e 00 00         	repne		jmp	qword ptr [rip + 0x2e9d] # 0x3ff8 <_GLOBAL_OFFSET_TABLE_+0xc8>
+
+0000000000001155 <__cxa_finalize@plt>:
+    1155: ff 25 9d 2e 00 00            	jmp	qword ptr [rip + 0x2e9d] # 0x3ff8 <_GLOBAL_OFFSET_TABLE_+0xc8>
+    115b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+
+Disassembly of section .plt.sec:
+
+0000000000001160 <.plt.sec>:
+    1160: f3 0f 1e fa                  	endbr64
+    1164: f2 ff 25 dd 2d 00 00         	repne		jmp	qword ptr [rip + 0x2ddd] # 0x3f48 <_GLOBAL_OFFSET_TABLE_+0x18>
+    116b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1170: f3 0f 1e fa                  	endbr64
+    1174: f2 ff 25 d5 2d 00 00         	repne		jmp	qword ptr [rip + 0x2dd5] # 0x3f50 <_GLOBAL_OFFSET_TABLE_+0x20>
+    117b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1180: f3 0f 1e fa                  	endbr64
+    1184: f2 ff 25 cd 2d 00 00         	repne		jmp	qword ptr [rip + 0x2dcd] # 0x3f58 <_GLOBAL_OFFSET_TABLE_+0x28>
+    118b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1190: f3 0f 1e fa                  	endbr64
+    1194: f2 ff 25 c5 2d 00 00         	repne		jmp	qword ptr [rip + 0x2dc5] # 0x3f60 <_GLOBAL_OFFSET_TABLE_+0x30>
+    119b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11a0: f3 0f 1e fa                  	endbr64
+    11a4: f2 ff 25 bd 2d 00 00         	repne		jmp	qword ptr [rip + 0x2dbd] # 0x3f68 <_GLOBAL_OFFSET_TABLE_+0x38>
+    11ab: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11b0: f3 0f 1e fa                  	endbr64
+    11b4: f2 ff 25 b5 2d 00 00         	repne		jmp	qword ptr [rip + 0x2db5] # 0x3f70 <_GLOBAL_OFFSET_TABLE_+0x40>
+    11bb: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11c0: f3 0f 1e fa                  	endbr64
+    11c4: f2 ff 25 ad 2d 00 00         	repne		jmp	qword ptr [rip + 0x2dad] # 0x3f78 <_GLOBAL_OFFSET_TABLE_+0x48>
+    11cb: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11d0: f3 0f 1e fa                  	endbr64
+    11d4: f2 ff 25 a5 2d 00 00         	repne		jmp	qword ptr [rip + 0x2da5] # 0x3f80 <_GLOBAL_OFFSET_TABLE_+0x50>
+    11db: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11e0: f3 0f 1e fa                  	endbr64
+    11e4: f2 ff 25 9d 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d9d] # 0x3f88 <_GLOBAL_OFFSET_TABLE_+0x58>
+    11eb: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    11f0: f3 0f 1e fa                  	endbr64
+    11f4: f2 ff 25 95 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d95] # 0x3f90 <_GLOBAL_OFFSET_TABLE_+0x60>
+    11fb: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1200: f3 0f 1e fa                  	endbr64
+    1204: f2 ff 25 8d 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d8d] # 0x3f98 <_GLOBAL_OFFSET_TABLE_+0x68>
+    120b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1210: f3 0f 1e fa                  	endbr64
+    1214: f2 ff 25 85 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d85] # 0x3fa0 <_GLOBAL_OFFSET_TABLE_+0x70>
+    121b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1220: f3 0f 1e fa                  	endbr64
+    1224: f2 ff 25 7d 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d7d] # 0x3fa8 <_GLOBAL_OFFSET_TABLE_+0x78>
+    122b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1230: f3 0f 1e fa                  	endbr64
+    1234: f2 ff 25 75 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d75] # 0x3fb0 <_GLOBAL_OFFSET_TABLE_+0x80>
+    123b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1240: f3 0f 1e fa                  	endbr64
+    1244: f2 ff 25 6d 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d6d] # 0x3fb8 <_GLOBAL_OFFSET_TABLE_+0x88>
+    124b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1250: f3 0f 1e fa                  	endbr64
+    1254: f2 ff 25 65 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d65] # 0x3fc0 <_GLOBAL_OFFSET_TABLE_+0x90>
+    125b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1260: f3 0f 1e fa                  	endbr64
+    1264: f2 ff 25 5d 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d5d] # 0x3fc8 <_GLOBAL_OFFSET_TABLE_+0x98>
+    126b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+    1270: f3 0f 1e fa                  	endbr64
+    1274: f2 ff 25 55 2d 00 00         	repne		jmp	qword ptr [rip + 0x2d55] # 0x3fd0 <_GLOBAL_OFFSET_TABLE_+0xa0>
+    127b: 0f 1f 44 00 00               	nop	dword ptr [rax + rax]
+
+Disassembly of section .text:
+
+0000000000001280 <_start>:
+    1280: f3 0f 1e fa                  	endbr64
+    1284: 31 ed                        	xor	ebp, ebp
+    1286: 49 89 d1                     	mov	r9, rdx
+    1289: 5e                           	pop	rsi
+    128a: 48 89 e2                     	mov	rdx, rsp
+    128d: 48 83 e4 f0                  	and	rsp, -0x10
+    1291: 50                           	push	rax
+    1292: 54                           	push	rsp
+    1293: 45 31 c0                     	xor	r8d, r8d
+    1296: 31 c9                        	xor	ecx, ecx
+    1298: 48 8d 3d 6f 08 00 00         	lea	rdi, [rip + 0x86f]      # 0x1b0e <main>
+    129f: ff 15 33 2d 00 00            	call	qword ptr [rip + 0x2d33] # 0x3fd8 <_GLOBAL_OFFSET_TABLE_+0xa8>
+    12a5: f4                           	hlt
+    12a6: 66 2e 0f 1f 84 00 00 00 00 00	nop	word ptr cs:[rax + rax]
+
+00000000000012b0 <deregister_tm_clones>:
+    12b0: 48 8d 3d 59 2d 00 00         	lea	rdi, [rip + 0x2d59]     # 0x4010 <stdin@GLIBC_2.2.5>
+    12b7: 48 8d 05 52 2d 00 00         	lea	rax, [rip + 0x2d52]     # 0x4010 <stdin@GLIBC_2.2.5>
+    12be: 48 39 f8                     	cmp	rax, rdi
+    12c1: 74 15                        	je	0x12d8 <deregister_tm_clones+0x28>
+    12c3: 48 8b 05 16 2d 00 00         	mov	rax, qword ptr [rip + 0x2d16] # 0x3fe0 <_GLOBAL_OFFSET_TABLE_+0xb0>
+    12ca: 48 85 c0                     	test	rax, rax
+    12cd: 74 09                        	je	0x12d8 <deregister_tm_clones+0x28>
+    12cf: ff e0                        	jmp	rax
+    12d1: 0f 1f 80 00 00 00 00         	nop	dword ptr [rax]
+    12d8: c3                           	ret
+    12d9: 0f 1f 80 00 00 00 00         	nop	dword ptr [rax]
+
+00000000000012e0 <register_tm_clones>:
+    12e0: 48 8d 3d 29 2d 00 00         	lea	rdi, [rip + 0x2d29]     # 0x4010 <stdin@GLIBC_2.2.5>
+    12e7: 48 8d 35 22 2d 00 00         	lea	rsi, [rip + 0x2d22]     # 0x4010 <stdin@GLIBC_2.2.5>
+    12ee: 48 29 fe                     	sub	rsi, rdi
+    12f1: 48 89 f0                     	mov	rax, rsi
+    12f4: 48 c1 ee 3f                  	shr	rsi, 0x3f
+    12f8: 48 c1 f8 03                  	sar	rax, 0x3
+    12fc: 48 01 c6                     	add	rsi, rax
+    12ff: 48 d1 fe                     	sar	rsi
+    1302: 74 14                        	je	0x1318 <register_tm_clones+0x38>
+    1304: 48 8b 05 e5 2c 00 00         	mov	rax, qword ptr [rip + 0x2ce5] # 0x3ff0 <_GLOBAL_OFFSET_TABLE_+0xc0>
+    130b: 48 85 c0                     	test	rax, rax
+    130e: 74 08                        	je	0x1318 <register_tm_clones+0x38>
+    1310: ff e0                        	jmp	rax
+    1312: 66 0f 1f 44 00 00            	nop	word ptr [rax + rax]
+    1318: c3                           	ret
+    1319: 0f 1f 80 00 00 00 00         	nop	dword ptr [rax]
+
+0000000000001320 <__do_global_dtors_aux>:
+    1320: f3 0f 1e fa                  	endbr64
+    1324: 80 3d ed 2c 00 00 00         	cmp	byte ptr [rip + 0x2ced], 0x0 # 0x4018 <completed.0>
+    132b: 75 2b                        	jne	0x1358 <__do_global_dtors_aux+0x38>
+    132d: 55                           	push	rbp
+    132e: 48 83 3d c2 2c 00 00 00      	cmp	qword ptr [rip + 0x2cc2], 0x0 # 0x3ff8 <_GLOBAL_OFFSET_TABLE_+0xc8>
+    1336: 48 89 e5                     	mov	rbp, rsp
+    1339: 74 0c                        	je	0x1347 <__do_global_dtors_aux+0x27>
+    133b: 48 8b 3d c6 2c 00 00         	mov	rdi, qword ptr [rip + 0x2cc6] # 0x4008 <__dso_handle>
+    1342: e8 09 fe ff ff               	call	0x1150 <.plt.got>
+    1347: e8 64 ff ff ff               	call	0x12b0 <deregister_tm_clones>
+    134c: c6 05 c5 2c 00 00 01         	mov	byte ptr [rip + 0x2cc5], 0x1 # 0x4018 <completed.0>
+    1353: 5d                           	pop	rbp
+    1354: c3                           	ret
+    1355: 0f 1f 00                     	nop	dword ptr [rax]
+    1358: c3                           	ret
+    1359: 0f 1f 80 00 00 00 00         	nop	dword ptr [rax]
+
+0000000000001360 <frame_dummy>:
+    1360: f3 0f 1e fa                  	endbr64
+    1364: e9 77 ff ff ff               	jmp	0x12e0 <register_tm_clones>
+
+0000000000001369 <legacy_auth_v1>:
+    1369: f3 0f 1e fa                  	endbr64
+    136d: 55                           	push	rbp
+    136e: 48 89 e5                     	mov	rbp, rsp
+    1371: 48 83 ec 10                  	sub	rsp, 0x10
+    1375: 48 8d 05 a4 0c 00 00         	lea	rax, [rip + 0xca4]      # 0x2020 <_IO_stdin_used+0x20>
+    137c: 48 89 c7                     	mov	rdi, rax
+    137f: e8 dc fd ff ff               	call	0x1160 <.plt.sec>
+    1384: c7 45 fc 09 00 00 00         	mov	dword ptr [rbp - 0x4], 0x9
+    138b: 83 7d fc 63                  	cmp	dword ptr [rbp - 0x4], 0x63
+    138f: 75 0f                        	jne	0x13a0 <legacy_auth_v1+0x37>
+    1391: 48 8d 05 b0 0c 00 00         	lea	rax, [rip + 0xcb0]      # 0x2048 <_IO_stdin_used+0x48>
+    1398: 48 89 c7                     	mov	rdi, rax
+    139b: e8 c0 fd ff ff               	call	0x1160 <.plt.sec>
+    13a0: 90                           	nop
+    13a1: c9                           	leave
+    13a2: c3                           	ret
+
+00000000000013a3 <unlock_backup_vault>:
+    13a3: f3 0f 1e fa                  	endbr64
+    13a7: 55                           	push	rbp
+    13a8: 48 89 e5                     	mov	rbp, rsp
+    13ab: 48 83 ec 10                  	sub	rsp, 0x10
+    13af: 48 89 7d f8                  	mov	qword ptr [rbp - 0x8], rdi
+    13b3: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    13b7: 48 8d 15 bd 0c 00 00         	lea	rdx, [rip + 0xcbd]      # 0x207b <_IO_stdin_used+0x7b>
+    13be: 48 89 d6                     	mov	rsi, rdx
+    13c1: 48 89 c7                     	mov	rdi, rax
+    13c4: e8 37 fe ff ff               	call	0x1200 <.plt.sec+0xa0>
+    13c9: 85 c0                        	test	eax, eax
+    13cb: 75 19                        	jne	0x13e6 <unlock_backup_vault+0x43>
+    13cd: 48 8d 05 ac 0c 00 00         	lea	rax, [rip + 0xcac]      # 0x2080 <_IO_stdin_used+0x80>
+    13d4: 48 89 c7                     	mov	rdi, rax
+    13d7: e8 84 fd ff ff               	call	0x1160 <.plt.sec>
+    13dc: bf 01 00 00 00               	mov	edi, 0x1
+    13e1: e8 6a fe ff ff               	call	0x1250 <.plt.sec+0xf0>
+    13e6: 90                           	nop
+    13e7: c9                           	leave
+    13e8: c3                           	ret
+
+00000000000013e9 <initialize_telemetry>:
+    13e9: f3 0f 1e fa                  	endbr64
+    13ed: 55                           	push	rbp
+    13ee: 48 89 e5                     	mov	rbp, rsp
+    13f1: 48 83 ec 20                  	sub	rsp, 0x20
+    13f5: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    13fe: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    1402: 31 c0                        	xor	eax, eax
+    1404: 48 8d 45 f0                  	lea	rax, [rbp - 0x10]
+    1408: 48 89 c7                     	mov	rdi, rax
+    140b: e8 10 fe ff ff               	call	0x1220 <.plt.sec+0xc0>
+    1410: 89 c7                        	mov	edi, eax
+    1412: e8 c9 fd ff ff               	call	0x11e0 <.plt.sec+0x80>
+    1417: e8 54 fe ff ff               	call	0x1270 <.plt.sec+0x110>
+    141c: 48 63 d0                     	movsxd	rdx, eax
+    141f: 48 69 d2 ad 8b db 68         	imul	rdx, rdx, 0x68db8bad
+    1426: 48 c1 ea 20                  	shr	rdx, 0x20
+    142a: c1 fa 0c                     	sar	edx, 0xc
+    142d: 89 c1                        	mov	ecx, eax
+    142f: c1 f9 1f                     	sar	ecx, 0x1f
+    1432: 29 ca                        	sub	edx, ecx
+    1434: 89 55 ec                     	mov	dword ptr [rbp - 0x14], edx
+    1437: 8b 55 ec                     	mov	edx, dword ptr [rbp - 0x14]
+    143a: 69 d2 10 27 00 00            	imul	edx, edx, 0x2710
+    1440: 29 d0                        	sub	eax, edx
+    1442: 89 45 ec                     	mov	dword ptr [rbp - 0x14], eax
+    1445: 8b 45 ec                     	mov	eax, dword ptr [rbp - 0x14]
+    1448: c1 e0 02                     	shl	eax, 0x2
+    144b: 35 ef be ad de               	xor	eax, 0xdeadbeef
+    1450: 89 45 ec                     	mov	dword ptr [rbp - 0x14], eax
+    1453: 90                           	nop
+    1454: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    1458: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    1461: 74 05                        	je	0x1468 <initialize_telemetry+0x7f>
+    1463: e8 48 fd ff ff               	call	0x11b0 <.plt.sec+0x50>
+    1468: c9                           	leave
+    1469: c3                           	ret
+
+000000000000146a <verify_network_cert>:
+    146a: f3 0f 1e fa                  	endbr64
+    146e: 55                           	push	rbp
+    146f: 48 89 e5                     	mov	rbp, rsp
+    1472: 48 83 ec 20                  	sub	rsp, 0x20
+    1476: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    147f: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    1483: 31 c0                        	xor	eax, eax
+    1485: 48 b8 43 45 52 54 5f 56 41 4c	movabs	rax, 0x4c41565f54524543
+    148f: 48 ba 49 44 5f 39 39 32 31 00	movabs	rdx, 0x313239395f4449
+    1499: 48 89 45 e0                  	mov	qword ptr [rbp - 0x20], rax
+    149d: 48 89 55 e8                  	mov	qword ptr [rbp - 0x18], rdx
+    14a1: 0f b6 45 e0                  	movzx	eax, byte ptr [rbp - 0x20]
+    14a5: 3c 43                        	cmp	al, 0x43
+    14a7: 74 0a                        	je	0x14b3 <verify_network_cert+0x49>
+    14a9: bf 01 00 00 00               	mov	edi, 0x1
+    14ae: e8 9d fd ff ff               	call	0x1250 <.plt.sec+0xf0>
+    14b3: 90                           	nop
+    14b4: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    14b8: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    14c1: 74 05                        	je	0x14c8 <verify_network_cert+0x5e>
+    14c3: e8 e8 fc ff ff               	call	0x11b0 <.plt.sec+0x50>
+    14c8: c9                           	leave
+    14c9: c3                           	ret
+
+00000000000014ca <init_secure_channel>:
+    14ca: f3 0f 1e fa                  	endbr64
+    14ce: 55                           	push	rbp
+    14cf: 48 89 e5                     	mov	rbp, rsp
+    14d2: 48 83 ec 10                  	sub	rsp, 0x10
+    14d6: bf 00 00 00 00               	mov	edi, 0x0
+    14db: e8 40 fd ff ff               	call	0x1220 <.plt.sec+0xc0>
+    14e0: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    14e4: c7 45 f4 00 00 00 00         	mov	dword ptr [rbp - 0xc], 0x0
+    14eb: eb 36                        	jmp	0x1523 <init_secure_channel+0x59>
+    14ed: 8b 45 f4                     	mov	eax, dword ptr [rbp - 0xc]
+    14f0: 83 e0 07                     	and	eax, 0x7
+    14f3: 48 8b 55 f8                  	mov	rdx, qword ptr [rbp - 0x8]
+    14f7: 89 c1                        	mov	ecx, eax
+    14f9: 48 d3 fa                     	sar	rdx, cl
+    14fc: 48 89 d0                     	mov	rax, rdx
+    14ff: 89 c1                        	mov	ecx, eax
+    1501: 8b 45 f4                     	mov	eax, dword ptr [rbp - 0xc]
+    1504: ba 37 00 00 00               	mov	edx, 0x37
+    1509: 0f af c2                     	imul	eax, edx
+    150c: 31 c8                        	xor	eax, ecx
+    150e: 89 c1                        	mov	ecx, eax
+    1510: 8b 45 f4                     	mov	eax, dword ptr [rbp - 0xc]
+    1513: 48 98                        	cdqe
+    1515: 48 8d 15 14 2b 00 00         	lea	rdx, [rip + 0x2b14]     # 0x4030 <g_session_key>
+    151c: 88 0c 10                     	mov	byte ptr [rax + rdx], cl
+    151f: 83 45 f4 01                  	add	dword ptr [rbp - 0xc], 0x1
+    1523: 83 7d f4 0f                  	cmp	dword ptr [rbp - 0xc], 0xf
+    1527: 7e c4                        	jle	0x14ed <init_secure_channel+0x23>
+    1529: c7 05 0d 2b 00 00 01 00 00 00	mov	dword ptr [rip + 0x2b0d], 0x1 # 0x4040 <g_session_active>
+    1533: 90                           	nop
+    1534: c9                           	leave
+    1535: c3                           	ret
+
+0000000000001536 <destroy_secure_channel>:
+    1536: f3 0f 1e fa                  	endbr64
+    153a: 55                           	push	rbp
+    153b: 48 89 e5                     	mov	rbp, rsp
+    153e: ba 10 00 00 00               	mov	edx, 0x10
+    1543: be 00 00 00 00               	mov	esi, 0x0
+    1548: 48 8d 05 e1 2a 00 00         	lea	rax, [rip + 0x2ae1]     # 0x4030 <g_session_key>
+    154f: 48 89 c7                     	mov	rdi, rax
+    1552: e8 79 fc ff ff               	call	0x11d0 <.plt.sec+0x70>
+    1557: c7 05 df 2a 00 00 00 00 00 00	mov	dword ptr [rip + 0x2adf], 0x0 # 0x4040 <g_session_active>
+    1561: 90                           	nop
+    1562: 5d                           	pop	rbp
+    1563: c3                           	ret
+
+0000000000001564 <scan_memory_integrity>:
+    1564: f3 0f 1e fa                  	endbr64
+    1568: 55                           	push	rbp
+    1569: 48 89 e5                     	mov	rbp, rsp
+    156c: 48 83 ec 40                  	sub	rsp, 0x40
+    1570: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    1579: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    157d: 31 c0                        	xor	eax, eax
+    157f: c7 45 c4 00 00 00 00         	mov	dword ptr [rbp - 0x3c], 0x0
+    1586: c7 45 c8 00 00 00 00         	mov	dword ptr [rbp - 0x38], 0x0
+    158d: eb 15                        	jmp	0x15a4 <scan_memory_integrity+0x40>
+    158f: 8b 45 c8                     	mov	eax, dword ptr [rbp - 0x38]
+    1592: 83 f0 ab                     	xor	eax, -0x55
+    1595: 89 c2                        	mov	edx, eax
+    1597: 8b 45 c8                     	mov	eax, dword ptr [rbp - 0x38]
+    159a: 48 98                        	cdqe
+    159c: 88 54 05 d0                  	mov	byte ptr [rbp + rax - 0x30], dl
+    15a0: 83 45 c8 01                  	add	dword ptr [rbp - 0x38], 0x1
+    15a4: 83 7d c8 1f                  	cmp	dword ptr [rbp - 0x38], 0x1f
+    15a8: 7e e5                        	jle	0x158f <scan_memory_integrity+0x2b>
+    15aa: c7 45 cc 00 00 00 00         	mov	dword ptr [rbp - 0x34], 0x0
+    15b1: eb 19                        	jmp	0x15cc <scan_memory_integrity+0x68>
+    15b3: 8b 45 cc                     	mov	eax, dword ptr [rbp - 0x34]
+    15b6: 48 98                        	cdqe
+    15b8: 0f b6 44 05 d0               	movzx	eax, byte ptr [rbp + rax - 0x30]
+    15bd: 0f b6 d0                     	movzx	edx, al
+    15c0: 8b 45 c4                     	mov	eax, dword ptr [rbp - 0x3c]
+    15c3: 01 d0                        	add	eax, edx
+    15c5: 89 45 c4                     	mov	dword ptr [rbp - 0x3c], eax
+    15c8: 83 45 cc 01                  	add	dword ptr [rbp - 0x34], 0x1
+    15cc: 83 7d cc 1f                  	cmp	dword ptr [rbp - 0x34], 0x1f
+    15d0: 7e e1                        	jle	0x15b3 <scan_memory_integrity+0x4f>
+    15d2: 8b 45 c4                     	mov	eax, dword ptr [rbp - 0x3c]
+    15d5: 3d ad de 00 00               	cmp	eax, 0xdead
+    15da: 75 19                        	jne	0x15f5 <scan_memory_integrity+0x91>
+    15dc: 48 8d 05 c5 0a 00 00         	lea	rax, [rip + 0xac5]      # 0x20a8 <_IO_stdin_used+0xa8>
+    15e3: 48 89 c7                     	mov	rdi, rax
+    15e6: e8 75 fb ff ff               	call	0x1160 <.plt.sec>
+    15eb: bf 02 00 00 00               	mov	edi, 0x2
+    15f0: e8 5b fc ff ff               	call	0x1250 <.plt.sec+0xf0>
+    15f5: 90                           	nop
+    15f6: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    15fa: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    1603: 74 05                        	je	0x160a <scan_memory_integrity+0xa6>
+    1605: e8 a6 fb ff ff               	call	0x11b0 <.plt.sec+0x50>
+    160a: c9                           	leave
+    160b: c3                           	ret
+
+000000000000160c <load_crypto_module>:
+    160c: f3 0f 1e fa                  	endbr64
+    1610: 55                           	push	rbp
+    1611: 48 89 e5                     	mov	rbp, rsp
+    1614: 48 83 ec 10                  	sub	rsp, 0x10
+    1618: c6 45 fb 00                  	mov	byte ptr [rbp - 0x5], 0x0
+    161c: c7 45 fc 00 00 00 00         	mov	dword ptr [rbp - 0x4], 0x0
+    1623: eb 2b                        	jmp	0x1650 <load_crypto_module+0x44>
+    1625: 8b 45 fc                     	mov	eax, dword ptr [rbp - 0x4]
+    1628: 48 98                        	cdqe
+    162a: 48 8d 15 57 0e 00 00         	lea	rdx, [rip + 0xe57]      # 0x2488 <fake_key.1>
+    1631: 0f b6 04 10                  	movzx	eax, byte ptr [rax + rdx]
+    1635: 30 45 fb                     	xor	byte ptr [rbp - 0x5], al
+    1638: 0f b6 45 fb                  	movzx	eax, byte ptr [rbp - 0x5]
+    163c: 01 c0                        	add	eax, eax
+    163e: 89 c2                        	mov	edx, eax
+    1640: 0f b6 45 fb                  	movzx	eax, byte ptr [rbp - 0x5]
+    1644: c0 e8 07                     	shr	al, 0x7
+    1647: 09 d0                        	or	eax, edx
+    1649: 88 45 fb                     	mov	byte ptr [rbp - 0x5], al
+    164c: 83 45 fc 01                  	add	dword ptr [rbp - 0x4], 0x1
+    1650: 83 7d fc 07                  	cmp	dword ptr [rbp - 0x4], 0x7
+    1654: 7e cf                        	jle	0x1625 <load_crypto_module+0x19>
+    1656: 80 7d fb ff                  	cmp	byte ptr [rbp - 0x5], -0x1
+    165a: 75 0f                        	jne	0x166b <load_crypto_module+0x5f>
+    165c: 48 8d 05 71 0a 00 00         	lea	rax, [rip + 0xa71]      # 0x20d4 <_IO_stdin_used+0xd4>
+    1663: 48 89 c7                     	mov	rdi, rax
+    1666: e8 f5 fa ff ff               	call	0x1160 <.plt.sec>
+    166b: 90                           	nop
+    166c: c9                           	leave
+    166d: c3                           	ret
+
+000000000000166e <compute_session_hash>:
+    166e: f3 0f 1e fa                  	endbr64
+    1672: 55                           	push	rbp
+    1673: 48 89 e5                     	mov	rbp, rsp
+    1676: c7 45 f4 c5 9d 1c 81         	mov	dword ptr [rbp - 0xc], 0x811c9dc5
+    167d: 48 8d 05 6e 0a 00 00         	lea	rax, [rip + 0xa6e]      # 0x20f2 <_IO_stdin_used+0xf2>
+    1684: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    1688: eb 21                        	jmp	0x16ab <compute_session_hash+0x3d>
+    168a: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    168e: 48 8d 50 01                  	lea	rdx, [rax + 0x1]
+    1692: 48 89 55 f8                  	mov	qword ptr [rbp - 0x8], rdx
+    1696: 0f b6 00                     	movzx	eax, byte ptr [rax]
+    1699: 0f b6 c0                     	movzx	eax, al
+    169c: 31 45 f4                     	xor	dword ptr [rbp - 0xc], eax
+    169f: 8b 45 f4                     	mov	eax, dword ptr [rbp - 0xc]
+    16a2: 69 c0 93 01 00 01            	imul	eax, eax, 0x1000193
+    16a8: 89 45 f4                     	mov	dword ptr [rbp - 0xc], eax
+    16ab: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    16af: 0f b6 00                     	movzx	eax, byte ptr [rax]
+    16b2: 84 c0                        	test	al, al
+    16b4: 75 d4                        	jne	0x168a <compute_session_hash+0x1c>
+    16b6: 8b 45 f4                     	mov	eax, dword ptr [rbp - 0xc]
+    16b9: 89 45 f0                     	mov	dword ptr [rbp - 0x10], eax
+    16bc: 8b 45 f0                     	mov	eax, dword ptr [rbp - 0x10]
+    16bf: 90                           	nop
+    16c0: 5d                           	pop	rbp
+    16c1: c3                           	ret
+
+00000000000016c2 <omega_protocol_legacy>:
+    16c2: f3 0f 1e fa                  	endbr64
+    16c6: 55                           	push	rbp
+    16c7: 48 89 e5                     	mov	rbp, rsp
+    16ca: 48 83 ec 70                  	sub	rsp, 0x70
+    16ce: 48 89 7d 98                  	mov	qword ptr [rbp - 0x68], rdi
+    16d2: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    16db: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    16df: 31 c0                        	xor	eax, eax
+    16e1: 48 83 7d 98 00               	cmp	qword ptr [rbp - 0x68], 0x0
+    16e6: 74 53                        	je	0x173b <omega_protocol_legacy+0x79>
+    16e8: 48 8b 45 98                  	mov	rax, qword ptr [rbp - 0x68]
+    16ec: 0f b6 00                     	movzx	eax, byte ptr [rax]
+    16ef: 84 c0                        	test	al, al
+    16f1: 74 48                        	je	0x173b <omega_protocol_legacy+0x79>
+    16f3: 48 c7 45 a8 00 00 00 00      	mov	qword ptr [rbp - 0x58], 0x0
+    16fb: eb 28                        	jmp	0x1725 <omega_protocol_legacy+0x63>
+    16fd: 48 8d 15 9c 0d 00 00         	lea	rdx, [rip + 0xd9c]      # 0x24a0 <fake_enc.0>
+    1704: 48 8b 45 a8                  	mov	rax, qword ptr [rbp - 0x58]
+    1708: 48 01 d0                     	add	rax, rdx
+    170b: 0f b6 00                     	movzx	eax, byte ptr [rax]
+    170e: 83 f0 ab                     	xor	eax, -0x55
+    1711: 89 c2                        	mov	edx, eax
+    1713: 48 8d 4d b0                  	lea	rcx, [rbp - 0x50]
+    1717: 48 8b 45 a8                  	mov	rax, qword ptr [rbp - 0x58]
+    171b: 48 01 c8                     	add	rax, rcx
+    171e: 88 10                        	mov	byte ptr [rax], dl
+    1720: 48 83 45 a8 01               	add	qword ptr [rbp - 0x58], 0x1
+    1725: 48 83 7d a8 25               	cmp	qword ptr [rbp - 0x58], 0x25
+    172a: 76 d1                        	jbe	0x16fd <omega_protocol_legacy+0x3b>
+    172c: c6 45 d6 00                  	mov	byte ptr [rbp - 0x2a], 0x0
+    1730: 0f b6 45 b0                  	movzx	eax, byte ptr [rbp - 0x50]
+    1734: 88 45 a7                     	mov	byte ptr [rbp - 0x59], al
+    1737: 0f b6 45 a7                  	movzx	eax, byte ptr [rbp - 0x59]
+    173b: 90                           	nop
+    173c: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    1740: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    1749: 74 05                        	je	0x1750 <omega_protocol_legacy+0x8e>
+    174b: e8 60 fa ff ff               	call	0x11b0 <.plt.sec+0x50>
+    1750: c9                           	leave
+    1751: c3                           	ret
+
+0000000000001752 <emit_system_diagnostics>:
+    1752: f3 0f 1e fa                  	endbr64
+    1756: 55                           	push	rbp
+    1757: 48 89 e5                     	mov	rbp, rsp
+    175a: 48 83 ec 10                  	sub	rsp, 0x10
+    175e: e8 1d fa ff ff               	call	0x1180 <.plt.sec+0x20>
+    1763: 89 45 fc                     	mov	dword ptr [rbp - 0x4], eax
+    1766: 8b 45 fc                     	mov	eax, dword ptr [rbp - 0x4]
+    1769: 89 c2                        	mov	edx, eax
+    176b: 8b 45 fc                     	mov	eax, dword ptr [rbp - 0x4]
+    176e: c1 f8 08                     	sar	eax, 0x8
+    1771: 31 d0                        	xor	eax, edx
+    1773: 88 05 af 28 00 00            	mov	byte ptr [rip + 0x28af], al # 0x4028 <g_pid_seed>
+    1779: 48 8d 05 90 09 00 00         	lea	rax, [rip + 0x990]      # 0x2110 <_IO_stdin_used+0x110>
+    1780: 48 89 c7                     	mov	rdi, rax
+    1783: e8 d8 f9 ff ff               	call	0x1160 <.plt.sec>
+    1788: 90                           	nop
+    1789: c9                           	leave
+    178a: c3                           	ret
+
+000000000000178b <check_vault_state>:
+    178b: f3 0f 1e fa                  	endbr64
+    178f: 55                           	push	rbp
+    1790: 48 89 e5                     	mov	rbp, rsp
+    1793: 48 83 ec 40                  	sub	rsp, 0x40
+    1797: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    17a0: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    17a4: 31 c0                        	xor	eax, eax
+    17a6: 48 8d 05 87 09 00 00         	lea	rax, [rip + 0x987]      # 0x2134 <_IO_stdin_used+0x134>
+    17ad: 48 89 c6                     	mov	rsi, rax
+    17b0: 48 8d 05 80 09 00 00         	lea	rax, [rip + 0x980]      # 0x2137 <_IO_stdin_used+0x137>
+    17b7: 48 89 c7                     	mov	rdi, rax
+    17ba: e8 81 fa ff ff               	call	0x1240 <.plt.sec+0xe0>
+    17bf: 48 89 45 d0                  	mov	qword ptr [rbp - 0x30], rax
+    17c3: 48 83 7d d0 00               	cmp	qword ptr [rbp - 0x30], 0x0
+    17c8: 0f 85 de 00 00 00            	jne	0x18ac <check_vault_state+0x121>
+    17ce: 48 8d 05 6f 09 00 00         	lea	rax, [rip + 0x96f]      # 0x2144 <_IO_stdin_used+0x144>
+    17d5: 48 89 c6                     	mov	rsi, rax
+    17d8: 48 8d 05 58 09 00 00         	lea	rax, [rip + 0x958]      # 0x2137 <_IO_stdin_used+0x137>
+    17df: 48 89 c7                     	mov	rdi, rax
+    17e2: e8 59 fa ff ff               	call	0x1240 <.plt.sec+0xe0>
+    17e7: 48 89 45 d0                  	mov	qword ptr [rbp - 0x30], rax
+    17eb: 48 83 7d d0 00               	cmp	qword ptr [rbp - 0x30], 0x0
+    17f0: 75 19                        	jne	0x180b <check_vault_state+0x80>
+    17f2: 48 8d 05 4f 09 00 00         	lea	rax, [rip + 0x94f]      # 0x2148 <_IO_stdin_used+0x148>
+    17f9: 48 89 c7                     	mov	rdi, rax
+    17fc: e8 5f f9 ff ff               	call	0x1160 <.plt.sec>
+    1801: bf 01 00 00 00               	mov	edi, 0x1
+    1806: e8 45 fa ff ff               	call	0x1250 <.plt.sec+0xf0>
+    180b: bf 00 00 00 00               	mov	edi, 0x0
+    1810: e8 0b fa ff ff               	call	0x1220 <.plt.sec+0xc0>
+    1815: 48 89 45 d8                  	mov	qword ptr [rbp - 0x28], rax
+    1819: c7 45 cc 00 00 00 00         	mov	dword ptr [rbp - 0x34], 0x0
+    1820: eb 33                        	jmp	0x1855 <check_vault_state+0xca>
+    1822: 8b 45 cc                     	mov	eax, dword ptr [rbp - 0x34]
+    1825: 83 e0 07                     	and	eax, 0x7
+    1828: 48 8b 55 d8                  	mov	rdx, qword ptr [rbp - 0x28]
+    182c: 89 c1                        	mov	ecx, eax
+    182e: 48 d3 fa                     	sar	rdx, cl
+    1831: 48 89 d0                     	mov	rax, rdx
+    1834: 89 c1                        	mov	ecx, eax
+    1836: 8b 45 cc                     	mov	eax, dword ptr [rbp - 0x34]
+    1839: ba 5a 00 00 00               	mov	edx, 0x5a
+    183e: 0f af c2                     	imul	eax, edx
+    1841: 83 c0 3c                     	add	eax, 0x3c
+    1844: 31 c8                        	xor	eax, ecx
+    1846: 89 c2                        	mov	edx, eax
+    1848: 8b 45 cc                     	mov	eax, dword ptr [rbp - 0x34]
+    184b: 48 98                        	cdqe
+    184d: 88 54 05 e0                  	mov	byte ptr [rbp + rax - 0x20], dl
+    1851: 83 45 cc 01                  	add	dword ptr [rbp - 0x34], 0x1
+    1855: 83 7d cc 0f                  	cmp	dword ptr [rbp - 0x34], 0xf
+    1859: 7e c7                        	jle	0x1822 <check_vault_state+0x97>
+    185b: 48 8b 55 d0                  	mov	rdx, qword ptr [rbp - 0x30]
+    185f: 48 8d 45 e0                  	lea	rax, [rbp - 0x20]
+    1863: 48 89 d1                     	mov	rcx, rdx
+    1866: ba 10 00 00 00               	mov	edx, 0x10
+    186b: be 01 00 00 00               	mov	esi, 0x1
+    1870: 48 89 c7                     	mov	rdi, rax
+    1873: e8 e8 f9 ff ff               	call	0x1260 <.plt.sec+0x100>
+    1878: 48 8b 45 d0                  	mov	rax, qword ptr [rbp - 0x30]
+    187c: 48 89 c7                     	mov	rdi, rax
+    187f: e8 0c f9 ff ff               	call	0x1190 <.plt.sec+0x30>
+    1884: 48 8d 05 f5 08 00 00         	lea	rax, [rip + 0x8f5]      # 0x2180 <_IO_stdin_used+0x180>
+    188b: 48 89 c7                     	mov	rdi, rax
+    188e: e8 cd f8 ff ff               	call	0x1160 <.plt.sec>
+    1893: 48 8d 05 26 09 00 00         	lea	rax, [rip + 0x926]      # 0x21c0 <_IO_stdin_used+0x1c0>
+    189a: 48 89 c7                     	mov	rdi, rax
+    189d: e8 be f8 ff ff               	call	0x1160 <.plt.sec>
+    18a2: bf 00 00 00 00               	mov	edi, 0x0
+    18a7: e8 a4 f9 ff ff               	call	0x1250 <.plt.sec+0xf0>
+    18ac: 48 8b 45 d0                  	mov	rax, qword ptr [rbp - 0x30]
+    18b0: 48 89 c1                     	mov	rcx, rax
+    18b3: ba 01 00 00 00               	mov	edx, 0x1
+    18b8: be 01 00 00 00               	mov	esi, 0x1
+    18bd: 48 8d 05 65 27 00 00         	lea	rax, [rip + 0x2765]     # 0x4029 <g_vault_byte>
+    18c4: 48 89 c7                     	mov	rdi, rax
+    18c7: e8 a4 f8 ff ff               	call	0x1170 <.plt.sec+0x10>
+    18cc: 48 8b 45 d0                  	mov	rax, qword ptr [rbp - 0x30]
+    18d0: 48 89 c7                     	mov	rdi, rax
+    18d3: e8 b8 f8 ff ff               	call	0x1190 <.plt.sec+0x30>
+    18d8: 90                           	nop
+    18d9: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    18dd: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    18e6: 74 05                        	je	0x18ed <check_vault_state+0x162>
+    18e8: e8 c3 f8 ff ff               	call	0x11b0 <.plt.sec+0x50>
+    18ed: c9                           	leave
+    18ee: c3                           	ret
+
+00000000000018ef <security_watchdog>:
+    18ef: f3 0f 1e fa                  	endbr64
+    18f3: 55                           	push	rbp
+    18f4: 48 89 e5                     	mov	rbp, rsp
+    18f7: b9 00 00 00 00               	mov	ecx, 0x0
+    18fc: ba 01 00 00 00               	mov	edx, 0x1
+    1901: be 00 00 00 00               	mov	esi, 0x0
+    1906: bf 00 00 00 00               	mov	edi, 0x0
+    190b: b8 00 00 00 00               	mov	eax, 0x0
+    1910: e8 1b f9 ff ff               	call	0x1230 <.plt.sec+0xd0>
+    1915: 48 85 c0                     	test	rax, rax
+    1918: 79 19                        	jns	0x1933 <security_watchdog+0x44>
+    191a: 48 8d 05 df 08 00 00         	lea	rax, [rip + 0x8df]      # 0x2200 <_IO_stdin_used+0x200>
+    1921: 48 89 c7                     	mov	rdi, rax
+    1924: e8 37 f8 ff ff               	call	0x1160 <.plt.sec>
+    1929: bf 01 00 00 00               	mov	edi, 0x1
+    192e: e8 1d f9 ff ff               	call	0x1250 <.plt.sec+0xf0>
+    1933: 90                           	nop
+    1934: 5d                           	pop	rbp
+    1935: c3                           	ret
+
+0000000000001936 <user_authentication_module>:
+    1936: f3 0f 1e fa                  	endbr64
+    193a: 55                           	push	rbp
+    193b: 48 89 e5                     	mov	rbp, rsp
+    193e: 48 83 ec 60                  	sub	rsp, 0x60
+    1942: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    194b: 48 89 45 f8                  	mov	qword ptr [rbp - 0x8], rax
+    194f: 31 c0                        	xor	eax, eax
+    1951: c7 45 ac 01 00 00 00         	mov	dword ptr [rbp - 0x54], 0x1
+    1958: 48 8d 05 de 08 00 00         	lea	rax, [rip + 0x8de]      # 0x223d <_IO_stdin_used+0x23d>
+    195f: 48 89 c7                     	mov	rdi, rax
+    1962: b8 00 00 00 00               	mov	eax, 0x0
+    1967: e8 54 f8 ff ff               	call	0x11c0 <.plt.sec+0x60>
+    196c: 48 8b 15 9d 26 00 00         	mov	rdx, qword ptr [rip + 0x269d] # 0x4010 <stdin@GLIBC_2.2.5>
+    1973: 48 8d 45 b0                  	lea	rax, [rbp - 0x50]
+    1977: be 40 00 00 00               	mov	esi, 0x40
+    197c: 48 89 c7                     	mov	rdi, rax
+    197f: e8 6c f8 ff ff               	call	0x11f0 <.plt.sec+0x90>
+    1984: 48 85 c0                     	test	rax, rax
+    1987: 74 52                        	je	0x19db <user_authentication_module+0xa5>
+    1989: 8b 45 ac                     	mov	eax, dword ptr [rbp - 0x54]
+    198c: 3d e7 03 00 00               	cmp	eax, 0x3e7
+    1991: 75 20                        	jne	0x19b3 <user_authentication_module+0x7d>
+    1993: 48 8d 05 be 08 00 00         	lea	rax, [rip + 0x8be]      # 0x2258 <_IO_stdin_used+0x258>
+    199a: 48 89 c7                     	mov	rdi, rax
+    199d: e8 be f7 ff ff               	call	0x1160 <.plt.sec>
+    19a2: 48 8d 05 df 08 00 00         	lea	rax, [rip + 0x8df]      # 0x2288 <_IO_stdin_used+0x288>
+    19a9: 48 89 c7                     	mov	rdi, rax
+    19ac: e8 af f7 ff ff               	call	0x1160 <.plt.sec>
+    19b1: eb 29                        	jmp	0x19dc <user_authentication_module+0xa6>
+    19b3: 48 8d 05 fe 08 00 00         	lea	rax, [rip + 0x8fe]      # 0x22b8 <_IO_stdin_used+0x2b8>
+    19ba: 48 89 c7                     	mov	rdi, rax
+    19bd: e8 9e f7 ff ff               	call	0x1160 <.plt.sec>
+    19c2: 48 8d 05 17 09 00 00         	lea	rax, [rip + 0x917]      # 0x22e0 <_IO_stdin_used+0x2e0>
+    19c9: 48 89 c7                     	mov	rdi, rax
+    19cc: e8 8f f7 ff ff               	call	0x1160 <.plt.sec>
+    19d1: bf 01 00 00 00               	mov	edi, 0x1
+    19d6: e8 75 f8 ff ff               	call	0x1250 <.plt.sec+0xf0>
+    19db: 90                           	nop
+    19dc: 48 8b 45 f8                  	mov	rax, qword ptr [rbp - 0x8]
+    19e0: 64 48 2b 04 25 28 00 00 00   	sub	rax, qword ptr fs:[0x28]
+    19e9: 74 05                        	je	0x19f0 <user_authentication_module+0xba>
+    19eb: e8 c0 f7 ff ff               	call	0x11b0 <.plt.sec+0x50>
+    19f0: c9                           	leave
+    19f1: c3                           	ret
+
+00000000000019f2 <unlock_vault_sequence>:
+    19f2: f3 0f 1e fa                  	endbr64
+    19f6: 55                           	push	rbp
+    19f7: 48 89 e5                     	mov	rbp, rsp
+    19fa: 53                           	push	rbx
+    19fb: 48 83 ec 38                  	sub	rsp, 0x38
+    19ff: 64 48 8b 04 25 28 00 00 00   	mov	rax, qword ptr fs:[0x28]
+    1a08: 48 89 45 e8                  	mov	qword ptr [rbp - 0x18], rax
+    1a0c: 31 c0                        	xor	eax, eax
+    1a0e: 0f b6 15 13 26 00 00         	movzx	edx, byte ptr [rip + 0x2613] # 0x4028 <g_pid_seed>
+    1a15: 0f b6 05 0d 26 00 00         	movzx	eax, byte ptr [rip + 0x260d] # 0x4029 <g_vault_byte>
+    1a1c: 89 d3                        	mov	ebx, edx
+    1a1e: 31 c3                        	xor	ebx, eax
+    1a20: 48 8b 05 f9 25 00 00         	mov	rax, qword ptr [rip + 0x25f9] # 0x4020 <g_argv0>
+    1a27: 48 89 c7                     	mov	rdi, rax
+    1a2a: e8 71 f7 ff ff               	call	0x11a0 <.plt.sec+0x40>
+    1a2f: 31 d8                        	xor	eax, ebx
+    1a31: 88 45 ce                     	mov	byte ptr [rbp - 0x32], al
+    1a34: 48 8d 05 ca 08 00 00         	lea	rax, [rip + 0x8ca]      # 0x2305 <_IO_stdin_used+0x305>
+    1a3b: 48 89 c7                     	mov	rdi, rax
+    1a3e: b8 00 00 00 00               	mov	eax, 0x0
+    1a43: e8 78 f7 ff ff               	call	0x11c0 <.plt.sec+0x60>
+    1a48: 48 8b 15 c1 25 00 00         	mov	rdx, qword ptr [rip + 0x25c1] # 0x4010 <stdin@GLIBC_2.2.5>
+    1a4f: 48 8d 45 d0                  	lea	rax, [rbp - 0x30]
+    1a53: be 10 00 00 00               	mov	esi, 0x10
+    1a58: 48 89 c7                     	mov	rdi, rax
+    1a5b: e8 90 f7 ff ff               	call	0x11f0 <.plt.sec+0x90>
+    1a60: 48 85 c0                     	test	rax, rax
+    1a63: 75 0a                        	jne	0x1a6f <unlock_vault_sequence+0x7d>
+    1a65: bf 01 00 00 00               	mov	edi, 0x1
+    1a6a: e8 e1 f7 ff ff               	call	0x1250 <.plt.sec+0xf0>
+    1a6f: 48 8d 45 d0                  	lea	rax, [rbp - 0x30]
+    1a73: ba 10 00 00 00               	mov	edx, 0x10
+    1a78: be 00 00 00 00               	mov	esi, 0x0
+    1a7d: 48 89 c7                     	mov	rdi, rax
+    1a80: e8 8b f7 ff ff               	call	0x1210 <.plt.sec+0xb0>
+    1a85: 88 45 cf                     	mov	byte ptr [rbp - 0x31], al
+    1a88: 0f b6 45 cf                  	movzx	eax, byte ptr [rbp - 0x31]
+    1a8c: 3a 45 ce                     	cmp	al, byte ptr [rbp - 0x32]
+    1a8f: 75 64                        	jne	0x1af5 <unlock_vault_sequence+0x103>
+    1a91: 48 8d 05 88 08 00 00         	lea	rax, [rip + 0x888]      # 0x2320 <_IO_stdin_used+0x320>
+    1a98: 48 89 c7                     	mov	rdi, rax
+    1a9b: e8 c0 f6 ff ff               	call	0x1160 <.plt.sec>
+    1aa0: 48 8d 05 ae 08 00 00         	lea	rax, [rip + 0x8ae]      # 0x2355 <_IO_stdin_used+0x355>
+    1aa7: 48 89 c7                     	mov	rdi, rax
+    1aaa: e8 b1 f6 ff ff               	call	0x1160 <.plt.sec>
+    1aaf: 48 8d 05 ba 08 00 00         	lea	rax, [rip + 0x8ba]      # 0x2370 <_IO_stdin_used+0x370>
+    1ab6: 48 89 c7                     	mov	rdi, rax
+    1ab9: e8 a2 f6 ff ff               	call	0x1160 <.plt.sec>
+    1abe: 48 8d 05 e3 08 00 00         	lea	rax, [rip + 0x8e3]      # 0x23a8 <_IO_stdin_used+0x3a8>
+    1ac5: 48 89 c7                     	mov	rdi, rax
+    1ac8: e8 93 f6 ff ff               	call	0x1160 <.plt.sec>
+    1acd: 48 8d 05 ff 08 00 00         	lea	rax, [rip + 0x8ff]      # 0x23d3 <_IO_stdin_used+0x3d3>
+    1ad4: 48 89 c7                     	mov	rdi, rax
+    1ad7: e8 84 f6 ff ff               	call	0x1160 <.plt.sec>
+    1adc: 48 8d 05 05 09 00 00         	lea	rax, [rip + 0x905]      # 0x23e8 <_IO_stdin_used+0x3e8>
+    1ae3: 48 89 c7                     	mov	rdi, rax
+    1ae6: e8 75 f6 ff ff               	call	0x1160 <.plt.sec>
+    1aeb: bf 00 00 00 00               	mov	edi, 0x0
+    1af0: e8 5b f7 ff ff               	call	0x1250 <.plt.sec+0xf0>
+    1af5: 48 8d 05 24 09 00 00         	lea	rax, [rip + 0x924]      # 0x2420 <_IO_stdin_used+0x420>
+    1afc: 48 89 c7                     	mov	rdi, rax
+    1aff: e8 5c f6 ff ff               	call	0x1160 <.plt.sec>
+    1b04: bf 01 00 00 00               	mov	edi, 0x1
+    1b09: e8 42 f7 ff ff               	call	0x1250 <.plt.sec+0xf0>
+
+0000000000001b0e <main>:
+    1b0e: f3 0f 1e fa                  	endbr64
+    1b12: 55                           	push	rbp
+    1b13: 48 89 e5                     	mov	rbp, rsp
+    1b16: 48 83 ec 10                  	sub	rsp, 0x10
+    1b1a: 89 7d fc                     	mov	dword ptr [rbp - 0x4], edi
+    1b1d: 48 89 75 f0                  	mov	qword ptr [rbp - 0x10], rsi
+    1b21: 48 8b 45 f0                  	mov	rax, qword ptr [rbp - 0x10]
+    1b25: 48 8b 00                     	mov	rax, qword ptr [rax]
+    1b28: 48 89 05 f1 24 00 00         	mov	qword ptr [rip + 0x24f1], rax # 0x4020 <g_argv0>
+    1b2f: 48 8d 05 12 09 00 00         	lea	rax, [rip + 0x912]      # 0x2448 <_IO_stdin_used+0x448>
+    1b36: 48 89 c7                     	mov	rdi, rax
+    1b39: e8 22 f6 ff ff               	call	0x1160 <.plt.sec>
+    1b3e: e8 0f fc ff ff               	call	0x1752 <emit_system_diagnostics>
+    1b43: e8 43 fc ff ff               	call	0x178b <check_vault_state>
+    1b48: e8 9c f8 ff ff               	call	0x13e9 <initialize_telemetry>
+    1b4d: e8 18 f9 ff ff               	call	0x146a <verify_network_cert>
+    1b52: e8 73 f9 ff ff               	call	0x14ca <init_secure_channel>
+    1b57: e8 08 fa ff ff               	call	0x1564 <scan_memory_integrity>
+    1b5c: e8 ab fa ff ff               	call	0x160c <load_crypto_module>
+    1b61: e8 08 fb ff ff               	call	0x166e <compute_session_hash>
+    1b66: e8 cb f9 ff ff               	call	0x1536 <destroy_secure_channel>
+    1b6b: 48 8d 05 fa 08 00 00         	lea	rax, [rip + 0x8fa]      # 0x246c <_IO_stdin_used+0x46c>
+    1b72: 48 89 c7                     	mov	rdi, rax
+    1b75: e8 48 fb ff ff               	call	0x16c2 <omega_protocol_legacy>
+    1b7a: e8 70 fd ff ff               	call	0x18ef <security_watchdog>
+    1b7f: e8 b2 fd ff ff               	call	0x1936 <user_authentication_module>
+    1b84: 48 8d 05 e2 08 00 00         	lea	rax, [rip + 0x8e2]      # 0x246d <_IO_stdin_used+0x46d>
+    1b8b: 48 89 c7                     	mov	rdi, rax
+    1b8e: e8 cd f5 ff ff               	call	0x1160 <.plt.sec>
+    1b93: b8 00 00 00 00               	mov	eax, 0x0
+    1b98: c9                           	leave
+    1b99: c3                           	ret
+
+Disassembly of section .fini:
+
+0000000000001b9c <_fini>:
+    1b9c: f3 0f 1e fa                  	endbr64
+    1ba0: 48 83 ec 08                  	sub	rsp, 0x8
+    1ba4: 48 83 c4 08                  	add	rsp, 0x8
+    1ba8: c3                           	ret
