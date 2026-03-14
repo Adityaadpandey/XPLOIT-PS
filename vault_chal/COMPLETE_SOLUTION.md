@@ -39,6 +39,7 @@ objdump -d chal -M intel | grep -B 30 "2355"
 **The `unlock_vault_sequence` function exists but is NEVER called!**
 
 Proof:
+
 ```bash
 # Search for calls to unlock_vault_sequence
 objdump -d chal -M intel | grep "call.*19f2"
@@ -70,6 +71,7 @@ The `unlock_vault_sequence` function is **orphaned code** - it exists but is unr
 **Strategy:** Redirect `user_authentication_module` to jump directly to `unlock_vault_sequence`.
 
 **Implementation:**
+
 ```python
 # At address 0x1936 (start of user_authentication_module)
 # Insert: JMP 0x19f2 (unlock_vault_sequence)
@@ -114,6 +116,7 @@ ssh user@linux-vm
 ```
 
 **Expected Output:**
+
 ```
 [Various initialization messages...]
 Vault Unlock Code: [Enter anything, e.g., "123"]
@@ -145,7 +148,7 @@ Vault Unlock Code: [Enter anything, e.g., "123"]
 
 ### The Hidden Function
 
-14. **unlock_vault_sequence (0x19f2)** - **NEVER CALLED** - Contains success message
+1. **unlock_vault_sequence (0x19f2)** - **NEVER CALLED** - Contains success message
 
 ## Every Change Made
 
@@ -154,6 +157,7 @@ Vault Unlock Code: [Enter anything, e.g., "123"]
 **Location:** 0x1936 (start of `user_authentication_module`)
 
 **Original Code:**
+
 ```asm
 1936: f3 0f 1e fa    endbr64
 193a: 55             push rbp
@@ -161,17 +165,20 @@ Vault Unlock Code: [Enter anything, e.g., "123"]
 ```
 
 **Patched Code:**
+
 ```asm
 1936: e9 b7 00 00 00    jmp 0x19f2 <unlock_vault_sequence>
 193b: 48 89 e5          mov rbp, rsp  (unreachable now)
 ```
 
 **Why This Change:**
+
 - The original function asks for operator ID but never calls the unlock function
 - By jumping directly to `unlock_vault_sequence`, we bypass all checks
 - This is the minimal change needed to reach the success message
 
 **What It Achieves:**
+
 - Redirects program flow to the hidden function
 - Skips the operator ID check entirely
 - Reaches the code that prints "VAULT SYSTEM CLEARED"
@@ -200,10 +207,12 @@ if (user_code == expected) {
 ```
 
 **However**, since we jump directly into the function, we still need to provide input when prompted. The code will be checked, but we can:
+
 1. Enter any value and let it fail (but we're already in the function)
 2. Calculate the correct code if needed
 
 **To calculate the correct code:**
+
 - `g_pid_seed` is set by earlier functions (likely from `getpid()`)
 - `g_vault_byte` is set from `.vault_state` file
 - `argv[0]` is the program name
@@ -230,30 +239,36 @@ Since these values change per execution, the code is dynamic. But our patch bypa
 ## Screenshots for Submission
 
 ### Screenshot 1: Finding the Hidden Function
+
 ```bash
 objdump -d chal -M intel | grep -A 5 "<unlock_vault_sequence>"
 ```
+
 Shows the function exists.
 
 ### Screenshot 2: Proving It's Never Called
+
 ```bash
 objdump -d chal -M intel | grep "call.*19f2"
 # No output = never called
 ```
 
 ### Screenshot 3: The Patch
+
 ```bash
 python3 patch_vault.py
 # Shows the patching process
 ```
 
 ### Screenshot 4: Verification
+
 ```bash
 objdump -d chal_patched -M intel | grep -A 2 "<user_authentication_module>"
 # Shows the JMP instruction
 ```
 
 ### Screenshot 5: Success Output
+
 ```bash
 ./chal_patched
 # Shows "VAULT SYSTEM CLEARED" message
